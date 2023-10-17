@@ -10,7 +10,10 @@ class CustomAppar extends StatelessWidget {
       children: [
         Text(
           'Notes',
-          style: TextStyle(fontSize: 28),
+          style: TextStyle(
+            fontSize: 28,
+            color: Colors.white,
+          ),
         ),
         Spacer(),
         CustomSearchIcon(),
