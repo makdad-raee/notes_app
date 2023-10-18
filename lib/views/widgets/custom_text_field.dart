@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(color: Colors.white),
       onSaved: onSaved,
       validator: (value) {
         if (value?.isEmpty ?? true) {
@@ -24,6 +25,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: kPrimaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
+        hoverColor: Colors.white,
         hintText: hint,
         hintStyle: const TextStyle(color: kPrimaryColor),
         border: buildBorder(),
