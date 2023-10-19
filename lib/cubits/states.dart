@@ -1,3 +1,5 @@
+import 'package:notes_app/models/notesmodel.dart';
+
 class NoteState {}
 
 class NoteIntialState extends NoteState {}
@@ -10,6 +12,20 @@ class ADDNoteErrorState extends NoteState {
   final String errorMessages;
 
   ADDNoteErrorState({required this.errorMessages});
+}
+
+class ReadNoteLoadingState extends NoteState {}
+
+class ReadNoteSucceesState extends NoteState {
+  final List<NotesModel> notes;
+
+  ReadNoteSucceesState({required this.notes});
+}
+
+class ReadNoteErrorState extends NoteState {
+  final String errorMessages;
+
+  ReadNoteErrorState({required this.errorMessages});
 }
 
 class EditNoteLoadingState extends NoteState {}
