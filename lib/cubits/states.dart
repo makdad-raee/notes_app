@@ -14,18 +14,10 @@ class ADDNoteErrorState extends NoteState {
   ADDNoteErrorState({required this.errorMessages});
 }
 
-class ReadNoteLoadingState extends NoteState {}
-
 class ReadNoteSucceesState extends NoteState {
   final List<NotesModel> notes;
 
   ReadNoteSucceesState({required this.notes});
-}
-
-class ReadNoteErrorState extends NoteState {
-  final String errorMessages;
-
-  ReadNoteErrorState({required this.errorMessages});
 }
 
 class EditNoteLoadingState extends NoteState {}
