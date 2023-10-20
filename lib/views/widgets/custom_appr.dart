@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/custom_search_icon.dart';
 
 class CustomAppar extends StatelessWidget {
-  const CustomAppar({super.key, required this.title, required this.icon});
+  const CustomAppar(
+      {super.key, required this.title, required this.icon, this.onPressed});
   final String title;
   final IconData icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class CustomAppar extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        CustomSearchIcon(icon: icon),
+        CustomSearchIcon(icon: icon, onPressed: onPressed),
       ],
     );
   }
