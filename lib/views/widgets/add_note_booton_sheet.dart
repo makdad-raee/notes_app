@@ -14,6 +14,7 @@ class AddNoteBottonSheet extends StatelessWidget {
         print('Faild${state.errorMessages}');
       }
       if (state is ADDNoteSucceesState) {
+        BlocProvider.of<NotesCubit>(context).fetchAllNotes();
         Navigator.pop(context);
       }
     }, builder: (context, state) {
