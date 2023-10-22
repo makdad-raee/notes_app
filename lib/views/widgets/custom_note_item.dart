@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit.dart';
-import 'package:notes_app/cubits/states.dart';
 import 'package:notes_app/views/widgets/edit_note_view.dart';
 import 'package:notes_app/models/notesmodel.dart';
 
@@ -24,7 +23,7 @@ class NoteItem extends StatelessWidget {
           left: 16,
         ),
         decoration: BoxDecoration(
-          color: Colors.yellow, //Color(note.color),
+          color: Color(note.color), //Color(note.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
